@@ -1,0 +1,972 @@
+<html><head>
+        <base href="/">
+        <title>Learning Plan Management Tool</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <!-- 1. Load libraries -->
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!--		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ --> 
+        <!-- Polyfill(s) for older browsers -->
+        <script src="node_modules/core-js/client/shim.min.js"></script>
+        <script src="node_modules/zone.js/dist/zone.js"></script>
+        <script src="node_modules/reflect-metadata/Reflect.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="node_modules/ng2-bs3-modal/bundles/ng2-bs3-modal.js"></script>
+        <!-- 2. Configure SystemJS -->
+        <script src="systemjs.config.js"></script>
+        <script>
+            System.import('app').catch(function(err){ console.error(err); });
+        </script>
+        <link rel="stylesheet" href="bootstrap-nav-override.css">
+        <link rel="stylesheet" href="app/styles/forms.css">
+        <link rel="stylesheet" href="app/styles/bootstrap-overrides.css">
+    
+<style id="__web-inspector-hide-shortcut-style__" type="text/css">
+.__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after
+{
+    visibility: hidden !important;
+}
+</style>
+
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+</script>
+
+</head>
+    <!-- 3. Display the application -->
+	<!-- 3. Wilson added this... -->
+    <body>
+        <my-app><div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-default" role="navigation">
+                
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="javascript:void(0)"></a>
+                </div>
+
+                
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class=""><a class="nav-link" href="/jobRoles">Job Roles</a></li>
+                        <li class=""><a class="nav-link" href="/task">Task</a></li>
+                        <li class="active"><a class="nav-link router-link-active" href="/ksa">KSA</a></li>
+                        
+                    </ul>
+                    <div class="nav-title">Learning Plan Management Tool v1.0</div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--template bindings={}-->
+    <!--template bindings={}-->
+    <!--template bindings={}-->
+	<!--template bindings={}-->
+    <div class="row">
+        <div class="col-md-12">
+            <router-outlet></router-outlet><ksa><form>
+    <!--template bindings={}-->
+
+<div class="row" style="box-shadow: 0 3px 2px grey; width:100%; background-color:#f5f5f5; margin-left:3px;  margin-top:-10px;margin-bottom:16px; padding-top:6px; padding-bottom:6px; padding-right:10px">
+  
+<div style="text-align:left; float:left; padding-left:10px;padding-top:4px">
+  Selected Job Roles 
+	<select> 
+      <option>0022 383 HADMDI FT</option>
+	  <option>0022 383 SFNLAN FS</option>
+	  <option>0022 383 SSRDDF FS</option>
+	  <option>0022 383 SDRFNC FS</option>
+	  <option>0022 383 SPROJA FS</option>
+	  <option>0022 383 SDVMGF FS</option>
+	  <option>0022 383 SRMGFI FS</option>
+	  <option>0022 398 SADMOF FS</option>
+	  <option>0022 398 HADMDI FT</option>
+	  <option>0022 398 HADDMM FT</option>
+<!-- remove later -->
+	  <option>0022 398 HADMDI FT</option>
+	  <option>0022 398 HADDMM FT</option>
+	  
+	  
+  	</select>
+</div>
+  
+<div style="float:right;">
+
+<div style="float:left">
+	<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add New KSA</button>&nbsp;
+	<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-save"></span> &nbsp;Save</button> &nbsp; 
+</div>
+
+<div style="float:right">
+	   <div class="dropdown open" style="float:right;margin-right: 15px;">
+		<button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;REPORTS
+		<span class="caret"></span></button>
+		
+		
+<ul class="dropdown-menu">
+		  <li><a href="#">Learning Plan</a></li>
+		  <li><a href="#">Task Exception</a></li>
+		  <li><a href="#">Unassigned KSAs</a></li>
+		  <li><a href="#">Solutions Summary</a></li>
+		  <li><a href="#">Task-Job Roles</a></li>
+</ul>
+
+	  </div>  
+</div>
+<!--
+<a href="#" title="Report Links" data-toggle="popover" data-placement="bottom" data-content="Learning Plan<br>KSA Summary Report"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;BI Report</a>
+
+<a href="https://app.powerbi.com/claiminviteredirect.html?tenant=fb7e6711-b619-4fbe-afe6-f83b12673323&amp;invitationId=40f59db7-54c1-4260-898c-01c6df372ac17iN3lTKevBm9pvQZuPMAF45VFm1GRs-ekeCQBckvmXE%3d&amp;email=WILSON_OKUSHI@homedepot.com" target="_blank"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;BI Report</a>
+-->
+
+</div>
+
+</div>
+  
+  
+  <div class="row">
+        <div class="col-md-4">
+            <h5 data-toggle="tooltip" title="The observable actions (something said or done) that a specified role needs to be able to perform.">Select a Task and assign KSA(s)</h5>
+            <div class="row">
+                <div class="form-group has-feedback col-md-11" style="padding-right:0px;">
+                    <search-box><input class="form-control" id="text_search" type="text" placeholder="search for tasks...">
+<i class="glyphicon glyphicon-search form-control-feedback"></i></search-box>
+                </div>
+            </div>
+            <tasks-list><div class="textArea-scroll-large form-group">
+    <table>
+        <tbody><!--template bindings={}--><tr style="vertical-align:middle; border-bottom:1px solid grey;">
+            <td style="width:5%; text-align:center;"><input name="optionsTask" type="radio" id="1" value="1"></td>
+            <td style="width:80%">
+                <div class="radio">
+                    <label class="">Provide timely, specific coaching that addresses performance or behavior</label>
+                </div>
+            </td>
+            <td style="width:15%; text-align: center;"><span class="taskKsaCountBox">11</span></td>
+        </tr><tr style="vertical-align:middle; border-bottom:1px solid grey;">
+            <td style="width:5%; text-align:center;"><input name="optionsTask" type="radio" id="2" value="2"></td>
+            <td style="width:80%">
+                <div class="radio">
+                    <label class="">Support an associate's development plan</label>
+                </div>
+            </td>
+            <td style="width:15%; text-align: center;"><span class="taskKsaCountBox">12</span></td>
+        </tr><tr style="vertical-align:middle; border-bottom:1px solid grey;">
+            <td style="width:5%; text-align:center;"><input name="optionsTask" type="radio" id="3" value="3"></td>
+            <td style="width:80%">
+                <div class="radio">
+                    <label class="">Conduct a talent assessment </label>
+                </div>
+            </td>
+            <td style="width:15%; text-align: center;"><span class="taskKsaCountBox">2</span></td>
+        </tr><tr style="vertical-align:middle; border-bottom:1px solid grey;">
+            <td style="width:5%; text-align:center;"><input name="optionsTask" type="radio" id="4" value="4"></td>
+            <td style="width:80%">
+                <div class="radio">
+                    <label class="">Deliver an effective performance review</label>
+                </div>
+            </td>
+            <td style="width:15%; text-align: center;"><span class="taskKsaCountBox">8</span></td>
+        </tr><tr style="vertical-align:middle; border-bottom:1px solid grey;">
+            <td style="width:5%; text-align:center;"><input name="optionsTask" type="radio" id="5" value="5"></td>
+            <td style="width:80%">
+                <div class="radio">
+                    <label class="">Write an effective performance review</label>
+                </div>
+            </td>
+            <td style="width:15%; text-align: center;"><span class="taskKsaCountBox">7</span></td>
+        </tr><tr style="vertical-align:middle; border-bottom:1px solid grey;">
+            <td style="width:5%; text-align:center;"><input name="optionsTask" type="radio" id="6" value="6"></td>
+            <td style="width:80%">
+                <div class="radio">
+                    <label class="">Recognize and celebrate successes</label>
+                </div>
+            </td>
+            <td style="width:15%; text-align: center;"><span class="taskKsaCountBox">15</span></td>
+        </tr><tr style="vertical-align:middle; border-bottom:1px solid grey;">
+            <td style="width:5%; text-align:center;"><input name="optionsTask" type="radio" id="7" value="7"></td>
+            <td style="width:80%">
+                <div class="radio">
+                    <label class="">Conduct difficult conversations</label>
+                </div>
+            </td>
+            <td style="width:15%; text-align: center;"><span class="taskKsaCountBox">9</span></td>
+        </tr><tr style="vertical-align:middle; border-bottom:1px solid grey;">
+            <td style="width:5%; text-align:center;"><input name="optionsTask" type="radio" id="10" value="10"></td>
+            <td style="width:80%">
+                <div class="radio">
+                    <label class="">How to update course materials</label>
+                </div>
+            </td>
+            <td style="width:15%; text-align: center;"><span class="taskKsaCountBox">9</span></td>
+        </tr><tr style="vertical-align:middle; border-bottom:1px solid grey;">
+            <td style="width:5%; text-align:center;"><input name="optionsTask" type="radio" id="11" value="11"></td>
+            <td style="width:80%">
+                <div class="radio">
+                    <label class="">Know how to do You tube captioning</label>
+                </div>
+            </td>
+            <td style="width:15%; text-align: center;"><span class="taskKsaCountBox">9</span></td>
+        </tr><tr style="vertical-align:middle; border-bottom:1px solid grey;">
+            <td style="width:5%; text-align:center;"><input name="optionsTask" type="radio" id="12" value="12"></td>
+            <td style="width:80%">
+                <div class="radio">
+                    <label class="">Learn Sharepoint</label>
+                </div>
+            </td>
+            <td style="width:15%; text-align: center;"><span class="taskKsaCountBox">4</span></td>
+        </tr><tr style="vertical-align:middle; border-bottom:1px solid grey;">
+            <td style="width:5%; text-align:center;"><input name="optionsTask" type="radio" id="14" value="14"></td>
+            <td style="width:80%">
+                <div class="radio">
+                    <label class="">Learn KD</label>
+                </div>
+            </td>
+            <td style="width:15%; text-align: center;"><span class="taskKsaCountBox">7</span></td>
+        </tr><tr style="vertical-align:middle; border-bottom:1px solid grey;">
+            <td style="width:5%; text-align:center;"><input name="optionsTask" type="radio" id="18" value="18"></td>
+            <td style="width:80%">
+                <div class="radio">
+                    <label class="noCounts">500 Tasks</label>
+                </div>
+            </td>
+            <td style="width:15%; text-align: center;"><span class="taskKsaCountBox">0</span></td>
+        </tr><tr style="vertical-align:middle; border-bottom:1px solid grey;">
+            <td style="width:5%; text-align:center;"><input name="optionsTask" type="radio" id="20" value="20"></td>
+            <td style="width:80%">
+                <div class="radio">
+                    <label class="noCounts">1245</label>
+                </div>
+            </td>
+            <td style="width:15%; text-align: center;"><span class="taskKsaCountBox">0</span></td>
+        </tr>
+    </tbody></table>
+</div></tasks-list>
+        </div>
+        <div class="col-md-8">
+  
+
+    
+  <div class="table-tab-wrapper">
+                <div class="table-tabs">KSA</div>
+                <div class="table-tabs selected">Learning Need</div>
+            </div>
+            <!--template bindings={}-->
+            <!--template bindings={}-->
+            <!--template bindings={}--><ksa-list-unassigned><div class="col-md-12">
+    <!--template bindings={}--><div>
+        <div class="form-group has-feedback col-md-offset-6 col-md-6" style="padding-right:0px;">
+            <search-box><input class="form-control" id="text_search" type="text" placeholder="search for Available KSA's">
+<i class="glyphicon glyphicon-search form-control-feedback"></i></search-box>
+        </div>
+        <div class="scrollable">
+            <table class="table table-hover table-smaller-font ksa-column-table">
+                <thead>
+                    <tr>
+                        <td>Available KSA</td>
+                        <td>Sub Content Area</td>
+                        <td>Type</td>
+                        <td>Need</td>
+                        <td>Edit</td>
+                    </tr>
+                </thead>
+
+                <tbody><!--template bindings={}--><tr>
+                    <td><label><input type="checkbox" id="cbAbility to communicate" value="Ability to communicate">Ability to communicate</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Leadership</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbAbility to communicate" value="Ability to communicate">Ability to communicate</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Leadership</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbAbility to communicate" value="Ability to communicate">Ability to communicate</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Leadership</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbAbility to recognize others" value="Ability to recognize others">Ability to recognize others</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Leadership</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbAbility to recognize others" value="Ability to recognize others">Ability to recognize others</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Leadership</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbAbility to recognize others" value="Ability to recognize others">Ability to recognize others</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Leadership</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbBe lift equipment certified" value="Be lift equipment certified">Be lift equipment certified</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbBe lift equipment certified" value="Be lift equipment certified">Be lift equipment certified</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbBe lift equipment certified" value="Be lift equipment certified">Be lift equipment certified</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbHave good listening skills" value="Have good listening skills">Have good listening skills</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Leadership</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbHave good listening skills" value="Have good listening skills">Have good listening skills</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Leadership</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbHave good listening skills" value="Have good listening skills">Have good listening skills</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Leadership</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow BOSS/Activity Manager systems" value="Know BOSS/Activity Manager systems">Know BOSS/Activity Manager systems</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow BOSS/Activity Manager systems" value="Know BOSS/Activity Manager systems">Know BOSS/Activity Manager systems</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to close out an incomplete pallet" value="Know how to close out an incomplete pallet">Know how to close out an incomplete pallet</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to complete end of shift audit" value="Know how to complete end of shift audit">Know how to complete end of shift audit</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to conduct equipment checklist" value="Know how to conduct equipment checklist">Know how to conduct equipment checklist</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to conduct equipment checklist" value="Know how to conduct equipment checklist">Know how to conduct equipment checklist</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to conduct equipment checklist" value="Know how to conduct equipment checklist">Know how to conduct equipment checklist</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to conduct ST/lane audits" value="Know how to conduct ST/lane audits">Know how to conduct ST/lane audits</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to induct via CCS" value="Know how to induct via CCS">Know how to induct via CCS</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to operate RF/gladiator gun" value="Know how to operate RF/gladiator gun">Know how to operate RF/gladiator gun</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to operate RF/gladiator gun" value="Know how to operate RF/gladiator gun">Know how to operate RF/gladiator gun</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to operate RF/gladiator gun" value="Know how to operate RF/gladiator gun">Know how to operate RF/gladiator gun</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to properly load a trailer" value="Know how to properly load a trailer">Know how to properly load a trailer</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to read zone sheets" value="Know how to read zone sheets">Know how to read zone sheets</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to sign off on cube and weight of a trailer not fully loaded" value="Know how to sign off on cube and weight of a trailer not fully loaded">Know how to sign off on cube and weight of a trailer not fully loaded</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow how to sign off on packets and outbound loads" value="Know how to sign off on packets and outbound loads">Know how to sign off on packets and outbound loads</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow pallet building guidelines" value="Know pallet building guidelines">Know pallet building guidelines</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow pallet safety expectations" value="Know pallet safety expectations">Know pallet safety expectations</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow pallet/cart building guidelines" value="Know pallet/cart building guidelines">Know pallet/cart building guidelines</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow SIM techniques" value="Know SIM techniques">Know SIM techniques</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow SIM techniques" value="Know SIM techniques">Know SIM techniques</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow SIM techniques" value="Know SIM techniques">Know SIM techniques</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow the basic equipment options" value="Know the basic equipment options">Know the basic equipment options</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow the basic equipment options" value="Know the basic equipment options">Know the basic equipment options</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow the basic equipment options" value="Know the basic equipment options">Know the basic equipment options</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cb'Know the different types of IB loads (TF, RDC, X-Dock, PandA, CCS, BP, PTS)'" value="'Know the different types of IB loads (TF, RDC, X-Dock, PandA, CCS, BP, PTS)'">'Know the different types of IB loads (TF, RDC, X-Dock, PandA, CCS, BP, PTS)'</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow the facility layout" value="Know the facility layout">Know the facility layout</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow the facility layout" value="Know the facility layout">Know the facility layout</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow the facility layout" value="Know the facility layout">Know the facility layout</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow the steps for opening/closing out a pallet" value="Know the steps for opening/closing out a pallet">Know the steps for opening/closing out a pallet</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow the steps for opening/closing out a pallet/cart" value="Know the steps for opening/closing out a pallet/cart">Know the steps for opening/closing out a pallet/cart</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow the steps to the detail receive process" value="Know the steps to the detail receive process">Know the steps to the detail receive process</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow where equipment is located" value="Know where equipment is located">Know where equipment is located</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow where equipment is located" value="Know where equipment is located">Know where equipment is located</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow where equipment is located" value="Know where equipment is located">Know where equipment is located</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow where to turn in equipment" value="Know where to turn in equipment">Know where to turn in equipment</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbKnow where to turn in equipment" value="Know where to turn in equipment">Know where to turn in equipment</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand 5S policies and procedures" value="Understand 5S policies and procedures">Understand 5S policies and procedures</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand 5S policies and procedures" value="Understand 5S policies and procedures">Understand 5S policies and procedures</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand 5S policies and procedures" value="Understand 5S policies and procedures">Understand 5S policies and procedures</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand how to break down a pallet" value="Understand how to break down a pallet">Understand how to break down a pallet</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand how to read inbound packets" value="Understand how to read inbound packets">Understand how to read inbound packets</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand pallet safety expectations" value="Understand pallet safety expectations">Understand pallet safety expectations</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand pallet/cart safety expectations" value="Understand pallet/cart safety expectations">Understand pallet/cart safety expectations</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand proper cleaning processes for end of shift" value="Understand proper cleaning processes for end of shift">Understand proper cleaning processes for end of shift</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand proper cleaning processes for end of shift" value="Understand proper cleaning processes for end of shift">Understand proper cleaning processes for end of shift</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand proper cleaning processes for end of shift" value="Understand proper cleaning processes for end of shift">Understand proper cleaning processes for end of shift</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand proper stretch wrap guidelines" value="Understand proper stretch wrap guidelines">Understand proper stretch wrap guidelines</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand reports to use in LORP" value="Understand reports to use in LORP">Understand reports to use in LORP</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand safety SOP" value="Understand safety SOP">Understand safety SOP</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand safety SOP" value="Understand safety SOP">Understand safety SOP</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand safety SOP" value="Understand safety SOP">Understand safety SOP</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand steps to fluid unloading" value="Understand steps to fluid unloading">Understand steps to fluid unloading</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand team lift safety SOP" value="Understand team lift safety SOP">Understand team lift safety SOP</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand the difference between PTS types" value="Understand the difference between PTS types">Understand the difference between PTS types</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand the expectations of a clean trailer" value="Understand the expectations of a clean trailer">Understand the expectations of a clean trailer</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand the process of placing product on store pallet" value="Understand the process of placing product on store pallet">Understand the process of placing product on store pallet</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand the process of removing freight from ST location" value="Understand the process of removing freight from ST location">Understand the process of removing freight from ST location</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand the steps to closing out a trailer" value="Understand the steps to closing out a trailer">Understand the steps to closing out a trailer</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand trailer safety" value="Understand trailer safety">Understand trailer safety</label></td>
+                    <td>Operations - Inbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand trailer safety" value="Understand trailer safety">Understand trailer safety</label></td>
+                    <td>Operations - Outbound</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr><tr>
+                    <td><label><input type="checkbox" id="cbUnderstand when to run completed pallets to outbound" value="Understand when to run completed pallets to outbound">Understand when to run completed pallets to outbound</label></td>
+                    <td>Operations - Processing</td>
+                    <td>Functional</td>
+                    <td>Develop</td>
+                    <td class="icon-column"><button class="edit-icon btn btn-sm" type="button"><span class="glyphicon glyphicon-edit"></span></button></td>
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+</div></ksa-list-unassigned>
+            <div class="col-md-12">
+                <!--template bindings={}--><!--<button class="btn btn-default" type="button">Save</button>-->
+                <!-- <button class="btn btn-default" type="button">Add New KSA</button> -->
+            </div>
+            <new-ksa-popup></new-ksa-popup>
+            <edit-ksa-popup></edit-ksa-popup>
+        </div>
+    </div>
+</form>
+</ksa>
+        </div>
+    </div>
+</div>
+
+
+</my-app>
+    
+<modal class="modal fade" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+    <modal-header>
+        <div class="modal-header">
+            <!--template bindings={}--><button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                <span aria-hidden="true">×</span>
+            </button>
+            
+        <h4 class="modal-title">Create New KSA</h4>
+    
+        </div>
+    </modal-header>
+    <modal-body>
+        <div class="modal-body">
+            
+        <form>
+
+            <!--template bindings={}-->
+
+            <div class="row row-modal">
+                <div class="form-group col-md-12">
+                    <label for="ksaDescription">* What KSA/Learning need does the associate need to perform the selected task?</label>
+                    <textarea class="form-control ng-untouched ng-pristine ng-invalid" id="ksaDescription" name="ksaDescription" required="" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="row row-modal">
+                <div class="form-group">
+                    <label class="col-md-6" for="optionsFuncLeader">* Functional or Leader?</label>
+                    <div class="radio col-md-6 horizontal-radio-wrapper">
+                        <!--template bindings={}--><label class="radio-inline">
+                            <input id="optionsFunctional" name="optionsFuncLeader" type="radio" value="1">
+                            Functional
+                        </label><label class="radio-inline">
+                            <input id="optionsFunctional" name="optionsFuncLeader" type="radio" value="2">
+                            Leadership
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-modal">
+                <div class="form-group">
+                    <label class="col-md-6 control-label" for="optionsHireDev">* Learning Need?</label>
+                    <div class="radio col-md-6 horizontal-radio-wrapper">
+                        <!--template bindings={}--><label class="radio-inline">
+                            <input id="optionsHireDev" name="optionsHireDev" type="radio" value="1">
+                            Hire
+                        </label><label class="radio-inline">
+                            <input id="optionsHireDev" name="optionsHireDev" type="radio" value="2">
+                            Develop
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row row-modal">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="contentArea">* Content Sub Area</label>
+                        <select class="form-control ng-untouched ng-pristine ng-valid" name="contentArea">
+                            <!--template bindings={}--><option value="53">Administration</option><option value="24">Apprehensions</option><option value="4">Building Services</option><option value="68">Celebrate</option><option value="62">Collaboration</option><option value="60">Communication</option><option value="15">Compact Power</option><option value="70">Compliance</option><option value="61">Conflict Management</option><option value="40">Core Selling</option><option value="11">Credit</option><option value="28">CRTV</option><option value="69">Customer Experirence</option><option value="9">Customer Orders</option><option value="57">Customers FIRST</option><option value="10">Deliveries</option><option value="67">Develop</option><option value="71">Executing for Results</option><option value="82">Field Services</option><option value="72">Financial Acumen</option><option value="27">Freight</option><option value="55">General Bay Service</option><option value="19">HazMat</option><option value="12">HDPP</option><option value="83">Home Renovation Services</option><option value="29">In Aisle</option><option value="63">Influence</option><option value="76">Initiative</option><option value="66">Inspire</option><option value="80">Interline</option><option value="23">Investigations</option><option value="1">Labor Strategy</option><option value="64">Leading Change</option><option value="5">Learning Administration</option><option value="20">Lift Truck Safety</option><option value="8">Lot </option><option value="85">Merchandising</option><option value="21">Merchandising Safety</option><option value="14">Moving</option><option value="7">Office</option><option value="47">Operations - Asset Protection</option><option value="49">Operations - Engineering</option><option value="48">Operations - Human Resources</option><option value="45">Operations - ICQA</option><option value="42">Operations - Inbound</option><option value="51">Operations - Maintenance</option><option value="46">Operations - MHE</option><option value="44">Operations - Outbound</option><option value="43">Operations - Processing</option><option value="50">Operations - Transportation</option><option value="79">Outside sales</option><option value="84">Owned Businesses</option><option value="54">Packdown</option><option value="25">Physical Security</option><option value="17">PK</option><option value="81">Pro Referral</option><option value="73">Problem Solving</option><option value="39">Product Knowledge</option><option value="56">Project Execution</option><option value="26">Receiving</option><option value="6">Register Training</option><option value="16">Rental System</option><option value="13">Repair</option><option value="30">Reports</option><option value="77">Resilience</option><option value="65">Respect</option><option value="33">RLC - Asset Protection</option><option value="32">RLC - CRTV</option><option value="38">RLC - Environmental Health and Safety</option><option value="35">RLC - Human Resources</option><option value="34">RLC - Inventory Control </option><option value="36">RLC - Maintenance</option><option value="37">RLC - Office</option><option value="31">RLC - Repair</option><option value="52">Safety</option><option value="58">Safety</option><option value="18">Safety Orientation/Annual Training</option><option value="3">Scheduling</option><option value="75">Self Insight</option><option value="22">Shrink/Accuracy</option><option value="41">Specialty Selling</option><option value="78">Stores</option><option value="74">Strategic Mindset</option><option value="59">Technology</option><option value="2">Timekeeping</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row row-modal">
+                <div class="col-md-offset-1 col-md-10">
+                    <div class="form-group">
+                        <label class="col-md-3" for="createdBy">Created By:</label>
+                        <div class="col-md-9">
+                            <select class="form-control ng-untouched ng-pristine ng-valid" name="createdBy">
+                                <!--template bindings={}--><option value="1">Ammons, Ashley</option><option value="2">Mance, Imani</option><option value="3">Posluszny, David</option><option value="4">Gaylord, Laurin</option><option value="5">Parker, Brad</option><option value="6">Fraser, Jessica</option><option value="7">Garza, Sheri</option><option value="8">Parker, Jimmy</option><option value="9">Admin, KD</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-modal">
+                <div class="col-md-offset-1 col-md-10">
+                    <div class="form-group">
+                        <label class="col-md-3" for="tbTags">*TAG:</label>
+                        <div class="col-md-9">
+                            <input class="form-control ng-untouched ng-pristine ng-valid" id="tbTags" name="tbTags" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default btn-sm" type="submit">Save</button>
+            <button class="btn btn-default" data-dismiss="modal" type="button">Cancel</button>
+        </form>
+    
+        </div>
+    </modal-body>
+
+            </div>
+        </div>
+    </modal><modal class="modal fade" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+    <modal-header>
+        <div class="modal-header">
+            <!--template bindings={}--><button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                <span aria-hidden="true">×</span>
+            </button>
+            
+        <h4 class="modal-title">Edit KSA</h4>
+    
+        </div>
+    </modal-header>
+    <modal-body>
+        <div class="modal-body">
+            
+        <form>
+            
+            <!--template bindings={}-->
+
+            <div class="row row-modal">
+                <div class="form-group col-md-12">
+                    <label for="ksaDescription">* What KSA/Learning need does the associate need to perform the selected task?</label>
+                    <textarea class="form-control ng-untouched ng-pristine ng-invalid" id="ksaDescription" name="ksaDescription" required="" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="row row-modal">
+                <div class="form-group">
+                    <label class="col-md-6" for="optionsFuncLeader">* Functional or Leader?</label>
+                    <div class="radio col-md-6 horizontal-radio-wrapper">
+                        <!--template bindings={}--><label class="radio-inline">
+                            <input id="optionsFuncLeader" name="optionsFuncLeader" type="radio" value="1">
+                            Functional
+                        </label><label class="radio-inline">
+                            <input id="optionsFuncLeader" name="optionsFuncLeader" type="radio" value="2">
+                            Leadership
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-modal">
+                <div class="form-group">
+                    <label class="col-md-6 control-label" for="optionsHireDev">* Learning Need?</label>
+                    <div class="radio col-md-6 horizontal-radio-wrapper">
+                        <!--template bindings={}--><label class="radio-inline">
+                            <input id="optionsHireDev" name="optionsHireDev" type="radio" value="1">
+                            Hire
+                        </label><label class="radio-inline">
+                            <input id="optionsHireDev" name="optionsHireDev" type="radio" value="2">
+                            Develop
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-modal">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="optionsContentArea">* Content Sub Area</label>
+                        <select class="form-control ng-untouched ng-pristine ng-valid" name="contentArea">
+                            <!--template bindings={}--><option id="optionsContentArea" value="53">Administration</option><option id="optionsContentArea" value="24">Apprehensions</option><option id="optionsContentArea" value="4">Building Services</option><option id="optionsContentArea" value="68">Celebrate</option><option id="optionsContentArea" value="62">Collaboration</option><option id="optionsContentArea" value="60">Communication</option><option id="optionsContentArea" value="15">Compact Power</option><option id="optionsContentArea" value="70">Compliance</option><option id="optionsContentArea" value="61">Conflict Management</option><option id="optionsContentArea" value="40">Core Selling</option><option id="optionsContentArea" value="11">Credit</option><option id="optionsContentArea" value="28">CRTV</option><option id="optionsContentArea" value="69">Customer Experirence</option><option id="optionsContentArea" value="9">Customer Orders</option><option id="optionsContentArea" value="57">Customers FIRST</option><option id="optionsContentArea" value="10">Deliveries</option><option id="optionsContentArea" value="67">Develop</option><option id="optionsContentArea" value="71">Executing for Results</option><option id="optionsContentArea" value="82">Field Services</option><option id="optionsContentArea" value="72">Financial Acumen</option><option id="optionsContentArea" value="27">Freight</option><option id="optionsContentArea" value="55">General Bay Service</option><option id="optionsContentArea" value="19">HazMat</option><option id="optionsContentArea" value="12">HDPP</option><option id="optionsContentArea" value="83">Home Renovation Services</option><option id="optionsContentArea" value="29">In Aisle</option><option id="optionsContentArea" value="63">Influence</option><option id="optionsContentArea" value="76">Initiative</option><option id="optionsContentArea" value="66">Inspire</option><option id="optionsContentArea" value="80">Interline</option><option id="optionsContentArea" value="23">Investigations</option><option id="optionsContentArea" value="1">Labor Strategy</option><option id="optionsContentArea" value="64">Leading Change</option><option id="optionsContentArea" value="5">Learning Administration</option><option id="optionsContentArea" value="20">Lift Truck Safety</option><option id="optionsContentArea" value="8">Lot </option><option id="optionsContentArea" value="85">Merchandising</option><option id="optionsContentArea" value="21">Merchandising Safety</option><option id="optionsContentArea" value="14">Moving</option><option id="optionsContentArea" value="7">Office</option><option id="optionsContentArea" value="47">Operations - Asset Protection</option><option id="optionsContentArea" value="49">Operations - Engineering</option><option id="optionsContentArea" value="48">Operations - Human Resources</option><option id="optionsContentArea" value="45">Operations - ICQA</option><option id="optionsContentArea" value="42">Operations - Inbound</option><option id="optionsContentArea" value="51">Operations - Maintenance</option><option id="optionsContentArea" value="46">Operations - MHE</option><option id="optionsContentArea" value="44">Operations - Outbound</option><option id="optionsContentArea" value="43">Operations - Processing</option><option id="optionsContentArea" value="50">Operations - Transportation</option><option id="optionsContentArea" value="79">Outside sales</option><option id="optionsContentArea" value="84">Owned Businesses</option><option id="optionsContentArea" value="54">Packdown</option><option id="optionsContentArea" value="25">Physical Security</option><option id="optionsContentArea" value="17">PK</option><option id="optionsContentArea" value="81">Pro Referral</option><option id="optionsContentArea" value="73">Problem Solving</option><option id="optionsContentArea" value="39">Product Knowledge</option><option id="optionsContentArea" value="56">Project Execution</option><option id="optionsContentArea" value="26">Receiving</option><option id="optionsContentArea" value="6">Register Training</option><option id="optionsContentArea" value="16">Rental System</option><option id="optionsContentArea" value="13">Repair</option><option id="optionsContentArea" value="30">Reports</option><option id="optionsContentArea" value="77">Resilience</option><option id="optionsContentArea" value="65">Respect</option><option id="optionsContentArea" value="33">RLC - Asset Protection</option><option id="optionsContentArea" value="32">RLC - CRTV</option><option id="optionsContentArea" value="38">RLC - Environmental Health and Safety</option><option id="optionsContentArea" value="35">RLC - Human Resources</option><option id="optionsContentArea" value="34">RLC - Inventory Control </option><option id="optionsContentArea" value="36">RLC - Maintenance</option><option id="optionsContentArea" value="37">RLC - Office</option><option id="optionsContentArea" value="31">RLC - Repair</option><option id="optionsContentArea" value="52">Safety</option><option id="optionsContentArea" value="58">Safety</option><option id="optionsContentArea" value="18">Safety Orientation/Annual Training</option><option id="optionsContentArea" value="3">Scheduling</option><option id="optionsContentArea" value="75">Self Insight</option><option id="optionsContentArea" value="22">Shrink/Accuracy</option><option id="optionsContentArea" value="41">Specialty Selling</option><option id="optionsContentArea" value="78">Stores</option><option id="optionsContentArea" value="74">Strategic Mindset</option><option id="optionsContentArea" value="59">Technology</option><option id="optionsContentArea" value="2">Timekeeping</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row row-modal">
+                <div class="col-md-offset-1 col-md-10">
+                    <div class="form-group">
+                        <label class="col-md-3" for="optionUsers">Edited By:</label>
+                        <div class="col-md-9">
+                            <select class="form-control ng-untouched ng-pristine ng-valid" name="EditedBy">
+                                <!--template bindings={}--><option id="optionUsers" value="1">Ammons, Ashley</option><option id="optionUsers" value="2">Mance, Imani</option><option id="optionUsers" value="3">Posluszny, David</option><option id="optionUsers" value="4">Gaylord, Laurin</option><option id="optionUsers" value="5">Parker, Brad</option><option id="optionUsers" value="6">Fraser, Jessica</option><option id="optionUsers" value="7">Garza, Sheri</option><option id="optionUsers" value="8">Parker, Jimmy</option><option id="optionUsers" value="9">Admin, KD</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-modal">
+                <div class="col-md-offset-1 col-md-10">
+                    <div class="form-group">
+                        <label class="col-md-3" for="tbTags">*TAG:</label>
+                        <div class="col-md-9">
+                            <input class="form-control ng-untouched ng-pristine ng-valid" id="tbTags" name="tbTags" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default btn-sm" type="submit">Save</button>
+            <button class="btn btn-default" data-dismiss="modal" type="button">Cancel</button>
+        </form>
+    
+        </div>
+    </modal-body>
+
+            </div>
+        </div>
+    </modal>
+	
+	<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+</script>
+
+
+</body></html>
